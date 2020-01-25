@@ -16,7 +16,7 @@ body {
   display: grid;
   position: relative;
   overflow-x: hidden;
-  grid-template-rows: min-content 90vh 80vh repeat(5, min-content);
+  grid-template-rows: min-content 90vh 80vh max-content repeat(5, min-content);
   grid-template-columns: [full-start] minmax(2rem, 1fr) [content-start] minmax(min-content, 60rem) [mid-content-start] minmax(min-content, 60rem) [content-end navigation-start] minmax(2rem, 1fr) [full-end]; }
   @media only screen and (max-width: 45.625em) {
     .container {
@@ -46,6 +46,7 @@ body {
     .footer .social-account .social-icon {
       height: 5rem;
       width: 5rem;
+      -webkit-fill: #fff;
       fill: #fff;
       transition: all .2s; }
       @media only screen and (max-width: 58.25em) {
@@ -505,6 +506,10 @@ body {
       .header .nav-list .nav-item:hover {
         color: #F2994A;
         transform: scale(1.1); }
+        @media only screen and (max-width: 37.5em) {
+          .header .nav-list .nav-item:hover {
+            color: #fff;
+            transform: scale(1); } }
 
 .introduction {
   display: grid;
@@ -628,6 +633,134 @@ body {
     @media only screen and (max-width: 45.625em) {
       .resume .button-container {
         grid-auto-flow: row; } }
+
+.skills {
+  grid-column: full-start / full-end;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: minmax(2rem, 5rem) min-content 1fr minmax(2rem, 5rem);
+  grid-template-rows: min-content min-content;
+  padding: 15rem 0;
+  align-content: center;
+  grid-row-gap: 10rem; }
+  @media only screen and (max-width: 58.25em) {
+    .skills {
+      padding: 7rem 0;
+      grid-template-columns: minmax(2rem, 10rem) 1fr minmax(2rem, 10rem);
+      grid-template-rows: repeat(4, min-content);
+      grid-row-gap: 3rem; } }
+  .skills-image {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 2rem;
+    margin: 0 7rem; }
+    @media only screen and (max-width: 58.25em) {
+      .skills-image {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        margin-bottom: 5rem;
+        grid-template-columns: repeat(4, 1fr); } }
+    .skills-image .skills-icon {
+      padding: 2rem;
+      height: 10rem;
+      width: 10rem;
+      -webkit-fill: #fff;
+      fill: #fff;
+      box-shadow: 0 2rem 3rem rgba(77, 77, 77, 0.2);
+      transition: all .2s; }
+      @media only screen and (max-width: 58.25em) {
+        .skills-image .skills-icon {
+          padding: 1rem;
+          height: 6rem;
+          width: 6rem;
+          box-shadow: 0 2rem 3rem rgba(77, 77, 77, 0.2); } }
+      .skills-image .skills-icon:hover {
+        transform: scale(1.2); }
+  .skills-icon-1 {
+    background-color: #E96228; }
+  .skills-icon-2 {
+    background-color: #2862E9; }
+  .skills-icon-3 {
+    background-color: #f7f7f7; }
+  .skills-icon-4 {
+    background-color: #EBC525; }
+  .skills-detail {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    align-self: center; }
+    @media only screen and (max-width: 58.25em) {
+      .skills-detail {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2; } }
+    .skills-detail-title {
+      color: #F2994A;
+      font-family: "Montserrat", sans-serif;
+      font-size: 5rem;
+      line-height: 1; }
+      @media only screen and (max-width: 58.25em) {
+        .skills-detail-title {
+          font-size: 3.5rem; } }
+    .skills-detail-text {
+      font-family: "Montserrat", sans-serif;
+      color: #4D4D4D;
+      font-size: 1.5rem; }
+      @media only screen and (max-width: 58.25em) {
+        .skills-detail-text {
+          font-size: 1.2rem; } }
+      .skills-detail-text:not(:last-child) {
+        margin-top: 1rem;
+        margin-bottom: 1.3rem; }
+  .skills-image-2 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 2rem;
+    margin: 0 7rem; }
+    @media only screen and (max-width: 58.25em) {
+      .skills-image-2 {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+        grid-template-columns: repeat(4, 1fr); } }
+    .skills-image-2 .skills-icon {
+      padding: 2rem;
+      height: 10rem;
+      width: 10rem;
+      -webkit-fill: #fff;
+      fill: #fff;
+      background-color: #f7f7f7;
+      box-shadow: 0 2rem 3rem rgba(77, 77, 77, 0.2);
+      transition: all .2s; }
+      @media only screen and (max-width: 58.25em) {
+        .skills-image-2 .skills-icon {
+          padding: 1rem;
+          height: 6rem;
+          width: 6rem;
+          box-shadow: 0 2rem 3rem rgba(77, 77, 77, 0.2); } }
+      .skills-image-2 .skills-icon:hover {
+        transform: scale(1.2); }
+    .skills-image-2:hover .skills-image-2-icon:not(:hover) {
+      transform: scale(0.9); }
+  .skills-detail-2 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    align-self: center; }
+    @media only screen and (max-width: 58.25em) {
+      .skills-detail-2 {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4; } }
+  .skills .highlight {
+    font-size: 1.7rem;
+    color: #F2994A;
+    font-weight: 700; }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Raleway", sans-serif;
