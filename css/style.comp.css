@@ -651,7 +651,7 @@ body {
       grid-row-gap: 3rem; } }
   @media only screen and (max-width: 30em) {
     .skills {
-      grid-template-columns: minmax(1rem, 10rem) 1fr minmax(1rem, 10rem);
+      grid-template-columns: minmax(1rem, 3rem) 1fr minmax(1rem, 3rem);
       grid-template-rows: repeat(4, min-content);
       grid-row-gap: 3rem; } }
   .skills-image {
@@ -670,9 +670,11 @@ body {
         grid-row: 2 / 3;
         margin-bottom: 5rem;
         grid-template-columns: repeat(4, 1fr); } }
-    @media only screen and (max-width: 58.25em) {
+    @media only screen and (max-width: 30em) {
       .skills-image {
-        margin: 0 7rem; } }
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 3rem;
+        justify-items: start; } }
     .skills-image .skills-icon {
       padding: 2rem;
       height: 10rem;
@@ -722,7 +724,8 @@ body {
           font-size: 1.2rem; } }
       @media only screen and (max-width: 30em) {
         .skills-detail-text {
-          font-size: 1rem; } }
+          font-size: 1rem;
+          line-height: 1.8; } }
       .skills-detail-text:not(:last-child) {
         margin-top: 1rem;
         margin-bottom: 1.3rem; }
@@ -741,6 +744,11 @@ body {
         grid-column: 2 / 3;
         grid-row: 4 / 5;
         grid-template-columns: repeat(4, 1fr); } }
+    @media only screen and (max-width: 30em) {
+      .skills-image-2 {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 3rem;
+        justify-items: start; } }
     .skills-image-2 .skills-icon {
       padding: 2rem;
       height: 10rem;
