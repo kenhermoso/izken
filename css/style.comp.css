@@ -649,6 +649,11 @@ body {
       grid-template-columns: minmax(2rem, 10rem) 1fr minmax(2rem, 10rem);
       grid-template-rows: repeat(4, min-content);
       grid-row-gap: 3rem; } }
+  @media only screen and (max-width: 30em) {
+    .skills {
+      grid-template-columns: minmax(1rem, 10rem) 1fr minmax(1rem, 10rem);
+      grid-template-rows: repeat(4, min-content);
+      grid-row-gap: 3rem; } }
   .skills-image {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -665,6 +670,9 @@ body {
         grid-row: 2 / 3;
         margin-bottom: 5rem;
         grid-template-columns: repeat(4, 1fr); } }
+    @media only screen and (max-width: 58.25em) {
+      .skills-image {
+        margin: 0 7rem; } }
     .skills-image .skills-icon {
       padding: 2rem;
       height: 10rem;
@@ -712,6 +720,9 @@ body {
       @media only screen and (max-width: 58.25em) {
         .skills-detail-text {
           font-size: 1.2rem; } }
+      @media only screen and (max-width: 30em) {
+        .skills-detail-text {
+          font-size: 1rem; } }
       .skills-detail-text:not(:last-child) {
         margin-top: 1rem;
         margin-bottom: 1.3rem; }
@@ -761,6 +772,9 @@ body {
     font-size: 1.7rem;
     color: #F2994A;
     font-weight: 700; }
+    @media only screen and (max-width: 30em) {
+      .skills .highlight {
+        font-size: 1.3rem; } }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Raleway", sans-serif;
