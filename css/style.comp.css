@@ -613,6 +613,9 @@ body {
       @media only screen and (max-width: 45.625em) {
         .resume-image-1 {
           height: 40rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .resume-image-1 {
+          height: 33rem; } }
   .resume-detail {
     display: grid;
     align-content: center;
@@ -623,6 +626,9 @@ body {
         justify-items: center;
         grid-row: 2 / 3;
         grid-column: 1 / -1; } }
+    @media only screen and (max-width: 37.5em) {
+      .resume-detail-title {
+        font-size: 3rem; } }
   .resume .button-container {
     margin-top: 2rem;
     display: grid;
@@ -674,7 +680,7 @@ body {
       .skills-image {
         grid-template-columns: repeat(2, 1fr);
         margin: 0 3rem;
-        justify-items: start; } }
+        justify-items: center; } }
     .skills-image .skills-icon {
       padding: 2rem;
       height: 10rem;
@@ -748,7 +754,7 @@ body {
       .skills-image-2 {
         grid-template-columns: repeat(2, 1fr);
         margin: 0 3rem;
-        justify-items: start; } }
+        justify-items: center; } }
     .skills-image-2 .skills-icon {
       padding: 2rem;
       height: 10rem;
